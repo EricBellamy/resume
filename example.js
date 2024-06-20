@@ -1,18 +1,19 @@
 const { exec } = require('child_process');
 const fs = require('fs-extra');
 const path = require('path');
+const content = require("./readjson.js");
 
 const filename = "resume";
 
 // Path to your .tex file
 const texFilePath = path.join(__dirname, filename + '.tex');
 
-console.log(texFilePath);
 // Directory where the output PDF will be saved
 const outputDir = __dirname + `/outputs/` + filename;
 fs.ensureDirSync(outputDir);
 
 const latexCommand = `pdflatex -output-directory=${outputDir} ${texFilePath}`;
+console.log(latexCommand);
 
 // Execute the LaTeX command
 exec(latexCommand, (error, stdout, stderr) => {
