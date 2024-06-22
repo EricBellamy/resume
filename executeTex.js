@@ -4,7 +4,6 @@ const { exec } = require('child_process');
 
 module.exports = function (filename) {
 	const texFilePath = path.join(__dirname, "tex", filename + '.tex');
-	console.log(texFilePath);
 
 	// Ensure the dir
 	const outputDir = __dirname + `/outputs/` + filename;

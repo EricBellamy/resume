@@ -1,7 +1,8 @@
 const filename = "resume";
 
-const content = require("./readjson.js");
-const modifyTex = require("./modifyTex.js");
+const details = require("./readjson.js");
+const generateTex = require("./generateTex.js");
 const executeTex = require("./executeTex.js");
 
-executeTex(filename);
+generateTex(details);
+// executeTex(filename);
