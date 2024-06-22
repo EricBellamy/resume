@@ -3,6 +3,7 @@ const sections = {
 	summary: require("./tex/scripts/summary.js"),
 	experience: require("./tex/scripts/experience.js"),
 	projects: require("./tex/scripts/projects.js"),
+	skills: require("./tex/scripts/skills.js"),
 }
 const fs = require("fs-extra");
 const helper = require("./tex/helper.js");
@@ -13,13 +14,9 @@ module.exports = function (details) {
 	compiledSection += sections.top(details) + "\n\n\n\n";
 	compiledSection += sections.summary(details) + "\n\n\n\n";
 	compiledSection += sections.experience(details) + "\n\n\n\n";
-	compiledSection += sections.projects(details);
+	compiledSection += sections.projects(details) + "\n\n\n\n";
+	compiledSection += sections.skills(details);
 
 	let finishedTex = helper.replaceString(baseTex, "[SECTIONS]", compiledSection);
 	fs.writeFileSync("compiled.tex", finishedTex);
-
-
-	// console.log(topSection);
-	// const replaced = replaceString("hello [NAME] testing this out", "[NAME]", "Eric Bellamy");
-	// console.log(replaced);
 }

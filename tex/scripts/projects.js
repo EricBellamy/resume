@@ -9,6 +9,8 @@ const helper = require("../helper.js");
 module.exports = function (details) {
 	let compiledSection = "";
 	for(let project of details.projects){
+		if(project.active != true) continue;
+		
 		if(0 < compiledSection.length) compiledSection += "\n\n";
 
 		let bullets = "";
@@ -20,6 +22,7 @@ module.exports = function (details) {
 		let newSubheading = tex.subheading;
 		newSubheading = helper.replaceString(newSubheading, "[TITLE]", helper.escapeLatex(project.title));
 		newSubheading = helper.replaceString(newSubheading, "[START_DATE]", helper.escapeLatex(project.start));
+		newSubheading = helper.replaceString(newSubheading, "[TECHNOLOGIES]", helper.escapeLatex(project.technologies.join(", ")));
 		newSubheading = helper.replaceString(newSubheading, "[BULLETS]", bullets);
 
 		compiledSection += newSubheading;

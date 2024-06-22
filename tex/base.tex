@@ -40,29 +40,40 @@
 
 % Define a gray color for the rule
 \definecolor{lightgray}{gray}{0.8}
-\newcommand{\grayborder}[1][5pt]{%
+\newcommand{\grayborder}[1][0pt]{%
     \vspace{#1}%
     {\color{lightgray}\hrule}%
 }
 
 % Section formatting
-\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\bfseries\scshape}{}{0em}{}[\titlerule]
 
 % Ensure PDF is machine readable
 \pdfgentounicode=1
 
 % Custom commands
-\newcommand{\resumeItem}[1]{\item\small{#1}}
-\newcommand{\resumeSubheading}[4]{
-\vspace{-1pt}\item
+\newcommand{\experienceHeading}[4]{
+\vspace{-2pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-5pt}
 }
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\itemList}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\itemListEnd}{\end{itemize}}
+
+\newcommand{\sideProjectHeading}[3]{
+\vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+  \end{tabular*}\vspace{2pt}\\
+  \textit{Technologies: #3} \vspace{-5pt}
+}
+\newcommand{\resumeBullets}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt]}
+\newcommand{\resumeBulletsEnd}{\end{itemize}}
+
+\newcommand{\skillItem}[1]{\item\small{#1}}
 
 \begin{document}
 

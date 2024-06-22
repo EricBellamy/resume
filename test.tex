@@ -57,17 +57,18 @@
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-5pt}
 }
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \newcommand{\itemList}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\itemListEnd}{\end{itemize}}
 
-\newcommand{\sideProjectHeading}[2]{
+\newcommand{\sideProjectHeading}[3]{
 \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{2pt}\\
+  \textit{Technologies: #3} \vspace{-5pt}
 }
 \newcommand{\resumeBullets}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt]}
 \newcommand{\resumeBulletsEnd}{\end{itemize}}
@@ -91,7 +92,7 @@
 \resumeBullets
     \item Over 5 years of contract experience building products \& programs start to finish in small teams.
     \item Successfully migrated a 3400 page high traffic website from Wordpress to statically compiled.
-    \item Reduced the operating costs of a high traffic website by 99 via changes to server, CDN \& APIs.
+    \item Reduced the operating costs of a high traffic website by 99\% via changes to server, CDN \& APIs.
     \item Designed and developed a custom static website compiler that has deployed more than two dozen production websites.
 	\item Helped dozens of small businesses afford custom, maintenance free websites.
 \resumeBulletsEnd
@@ -112,6 +113,7 @@
     \item Implemented and evaluated deep RL models using PyTorch and RLlib
     \item Presented findings at weekly research meetings
 \resumeBulletsEnd
+
 \experienceHeading
 {Machine Learning Engineer}{Jan 2021 -- May 2022}
 {Acme AI Solutions}{San Francisco, CA}
@@ -132,7 +134,7 @@
 \itemList
 
 \sideProjectHeading
-{Image Captioning System}{Jan 2023}
+{Image Captioning System}{Jan 2023}{Python, TensorFlow, OpenCV}
 \resumeBullets
 \item Developed an end-to-end system for generating descriptive captions for images
 \item Utilized CNN and LSTM models for image feature extraction and caption generation
@@ -140,7 +142,7 @@
 \resumeBulletsEnd
 
 \sideProjectHeading
-{Sentiment Analysis API}{Aug 2022}
+{Sentiment Analysis API}{Aug 2022}{Python, Flask, NLTK, Hugging Face}
 \resumeBullets
 \item Built a RESTful API for sentiment analysis of text data
 \item Implemented pre-trained transformer models using Hugging Face
