@@ -22,7 +22,8 @@ module.exports = function (details) {
 		newSubheading = helper.replaceString(newSubheading, "[START_DATE]", helper.escapeLatex(experience.start));
 		newSubheading = helper.replaceString(newSubheading, "[END_DATE]", helper.escapeLatex(experience.end));
 		newSubheading = helper.replaceString(newSubheading, "[POSITION]", helper.escapeLatex(experience.position));
-		newSubheading = helper.replaceString(newSubheading, "[TECHNOLOGIES]", helper.escapeLatex(experience.technologies.join(", ")));
+		// newSubheading = helper.replaceString(newSubheading, "[TECHNOLOGIES]", helper.escapeLatex(experience.technologies.join(", ")));
+		newSubheading = helper.replaceString(newSubheading, "[TECHNOLOGIES]", helper.escapeLatex(experience.location));
 		newSubheading = helper.replaceString(newSubheading, "[BULLETS]", bullets);
 
 		compiledSection += newSubheading;
