@@ -7,4 +7,4 @@ const executeTex = require("./lib/executeTex.js");
 
 generateTex(details);
 generateTxtResume(details);
-// executeTex(filename);
+executeTex(__dirname, filename);
